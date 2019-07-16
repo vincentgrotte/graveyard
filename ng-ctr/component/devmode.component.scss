@@ -1,0 +1,31 @@
+@import '../../../variables';
+
+.dev-bar-item {
+    color: $info;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    line-height: 1.54;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.dev-mode-bar {
+    border-bottom: 1px solid grey;
+    height: 35px;
+    padding-left: 15px;
+}
+
+.logout-icon {
+    border-radius: 50%;
+    display: inline-block;
+    height: 25px;
+    text-align: center;
+    width: 25px;
+    &:hover {
+        background: $bg;
+        color: $primary;
+    }
+}

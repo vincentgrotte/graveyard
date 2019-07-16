@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title> - S I G 9 </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'drawsig/style.css' %}"/>
+</head>
+<ul id="nav">
+    <li><a class="hsubs" href="#">SIG9 - Options</a>
+        <ul class="subs">
+          <li><a onclick="drawSigil()">Encode Intent</a></li>
+          <li><a onclick="clearAll()">Clear All</a></li>
+          <li><a onclick="save()">Save</a></li>
+          <li><a onclick="toggleSaveList()">Show Saves</a></li>
+        </ul>
+    </li>
+    <li><a class="hsubs" href="#">Shape:</a>
+        <ul class="subs">
+          <li><a onclick="setShape('9-TS')">9-TS<span id="list_9TS">&nbsp;</span></a></li>
+          <li><a onclick="setShape('quad')">Quadrangle<span id="list_4">&nbsp;</span></a></li>
+          <li><a onclick="setShape('qent')">Pentaflip<span id="list_5">&nbsp;</span></a></li>
+          <li><a onclick="setShape('pent')">Pentagram<span id="list_5">&nbsp;</span></a></li>
+          <li><a onclick="setShape('hexa')">Hexagram<span id="list_6">&nbsp;</span></a></li>
+          <li><a onclick="setShape('sept')">Septagram<span id="list_7">&nbsp;</span></a></li>
+          <li><a onclick="setShape('octa')">Octagram<span id="list_8">&nbsp;</span></a></li>
+        </ul>
+    </li>
+    <li><a><span id="shape_status">9-TS</span></a>
+    </li>
+    <h6 id="greeting">
+      Place your thoughts in your words over here on my plate -<br>
+      I can match them to stars, you can meddle with fate.<br>
+    </h6>
+</ul>
+<body>
+<div id="main_cont">
+<div id="canvas_cont">
+  <form id="intent_form" action="" method="post">
+    {% csrf_token %}
+    {{ form.intent }}
+    <input id="draw_sigil" type="button" onclick="drawSigil()"/>
+    <div id="intent_novowels"><p></p></div>
+    <canvas id="canvas_x"></canvas>
+    <br><br>
+    <br>
+  </form>
+</div>
+</div>
+<div id="save_list">
+  Saved Sigils:<br><br>
+  {% if sigils %}
+  {% for sigil in sigils %}
+    <a onclick="load('{{ sigil.intent }}', '{{ sigil.shape }}')">{{ sigil.intent }} - {{ sigil.shape }}</a><br>
+  {% endfor %}
+  {% endif %}
+</div>
+</body>
+<script src="{% static 'drawsig/draw2.js' %}"></script>
+</html>

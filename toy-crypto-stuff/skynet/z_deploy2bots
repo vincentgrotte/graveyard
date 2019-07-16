@@ -1,0 +1,7 @@
+#!/bin/bash
+
+options=()
+options+=(--window -e "bash -c 'python3 bot.py ; bash'" )
+options+=(--tab -e "bash -c 'python3 bot.py ; bash'" )
+terminal "${options[@]}"
+exit 0

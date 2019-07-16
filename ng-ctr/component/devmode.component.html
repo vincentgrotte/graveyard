@@ -1,0 +1,24 @@
+<div class="d-flex row bg-white align-items-center dev-mode-bar">
+    <div class="pointer bg-grey logout-icon" (click)="logout()">
+        <fa-icon inlineSVG="/assets/devmode/cross.svg"
+            class="d-inline-block"></fa-icon>
+    </div>
+    <div class="ml-3 mb-1">
+        <div class="btn-group" dropdown>
+            <div dropdownToggle class="dev-bar-item pointer">
+                SET USER
+            </div>
+            <ul *dropdownMenu class="dropdown-menu">
+                <li *ngFor="let user of users" class="dropdown-item pointer w-100"
+                    (click)="setUser(user)">{{ user.rank }} : {{ user.name }} : {{ user.write }}
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div [ngClass]="{ 'text-primary': isIdleRedirectON, 'text-success': !isIdleRedirectON }"
+        class="dev-bar-item pointer ml-3" (click)="toggleIdleRedirect()">
+        {{ isIdleRedirectON ? IDLE_ON : IDLE_PAUSED }}
+        <fa-icon inlineSVG="/assets/devmode/clock.svg" class="ml-1 mr-2"></fa-icon>
+        <span>{{ isIdleRedirectON ? idleTimer : activeTimer }} s</span>
+    </div>
+</div>

@@ -1,0 +1,210 @@
+#main_cont {
+    width: 100%;
+    padding: 2px;
+    margin: 1px;
+}
+
+#canvas_cont {
+    float:left;
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 10%;
+    padding: 20px;
+}
+
+#canvas_x {
+    background-color: #f1f1f1;
+    width: 500px;
+    height: 500px;
+    border: 1px solid #d3d3d3;
+}
+
+#intent_novowels {
+    padding: 20px;
+    width: 500px;
+    height: 50px;
+    margin: 10 auto;
+    font-size: 24px;
+}
+
+#shape_status {
+    color: #ef0e0e;
+    font-size: 18px;
+}
+
+#save_list {
+    float: right;
+    padding: 10px;
+    margin: 20 auto;
+    margin-right: 10%;
+    width: 40%;
+}
+
+#greeting {
+    text-align: center;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	align-content: center;
+}
+
+th, td {
+    border-collapse: collapse;
+    text-align: left;
+    padding: 15px;
+    align-content: center;
+}
+
+#sub {
+	position: relative;
+	bottom: -150px;
+	padding-bottom: -30px;
+	bottom: -200px;
+	width: 170px;
+	height:  100px;
+}
+
+
+#jfish {
+	position: relative;
+	float: right;
+	bottom: -200px;
+	padding-bottom: -30px;
+	bottom: -200px;
+	width: 170px;
+	height:  100px;
+
+}
+
+#nav,#nav ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+#nav {
+    background: url('menu_bg.png') no-repeat scroll 0 0 transparent;
+    clear: both;
+    font-size: 12px;
+    height: 58px;
+    padding: 0 0 0 9px;
+    position: relative;
+    width: 957px;
+    font-size: 18px;
+    margin-left: 20%;
+}
+#nav ul {
+    background-color: #fff;
+    border:1px solid #000;
+    border-radius: 0 5px 5px 5px;
+    border-width: 0 1px 1px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    left: -9999px;
+    overflow: hidden;
+    position: absolute;
+    top: -9999px;
+    z-index: 2;
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -moz-transition: -moz-transform 0.1s linear;
+    -ms-transition: -ms-transform 0.1s linear;
+    -o-transition: -o-transform 0.1s linear;
+    -webkit-transition: -webkit-transform 0.1s linear;
+    transition: transform 0.1s linear;
+}
+#nav li {
+    background: url('menu_line.png') no-repeat scroll right 5px transparent;
+    float: left;
+    position: relative;
+}
+#nav li a {
+    color: #000;
+    display: block;
+    float: left;
+    font-weight: normal;
+    height: 30px;
+    padding: 23px 20px 0;
+    position: relative;
+    text-decoration: none;
+
+}
+#nav li:hover > a {
+    color: #000;
+}
+#nav li:hover, #nav a:focus, #nav a:hover, #nav a:active {
+    outline: 0 none;
+}
+#nav li:hover ul.subs {
+    left: 0;
+    top: 53px;
+    width: 180px;
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+#nav ul li {
+    background: none;
+    width: 100%;
+}
+#nav ul li a {
+    float: none;
+}
+#nav ul li:hover > a {
+    color: #ef0e0e;
+}
+#lavalamp {
+    height: 16px;
+    left: 13px;
+    position: absolute;
+    top: 0px;
+    width: 64px;
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+#lavalamp:hover {
+    -moz-transition-duration: 3000s;
+    -ms-transition-duration: 3000s;
+    -o-transition-duration: 3000s;
+    -webkit-transition-duration: 3000s;
+    transition-duration: 3000s;
+}
+#nav li:nth-of-type(1):hover ~ #lavalamp {
+    left: 13px;
+}
+#nav li:nth-of-type(2):hover ~ #lavalamp {
+    left: 90px;
+}
+#nav li:nth-of-type(3):hover ~ #lavalamp {
+    left: 170px;
+}
+#nav li:nth-of-type(4):hover ~ #lavalamp {
+    left: 250px;
+}
+#nav li:nth-of-type(5):hover ~ #lavalamp {
+    left: 330px;
+}
+#nav li:nth-of-type(6):hover ~ #lavalamp {
+    left: 410px;
+}
+#nav li:nth-of-type(7):hover ~ #lavalamp {
+    left: 490px;
+}
+#nav li:nth-of-type(8):hover ~ #lavalamp {
+    left: 565px;
+}
+
