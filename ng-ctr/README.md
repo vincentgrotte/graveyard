@@ -1,4 +1,8 @@
 # devmode
+
+# This is used to write a "devmode" copmonent into an angular application and then remove it again.
+# Similar to using git stash and apply
+
 ### Installation:
 - `cd /path/to/devmode/`
 - The install script needs a path to an angular project. eg. `./install.sh "path/to/angular/frontend/src"`

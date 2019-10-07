@@ -34,4 +34,3 @@ Original data: b'exit'
 Notice: 'Test' and 'exit' are sent and received as the same encrypted message.
 This means it's vulnerable to frequency analysis. When 'a' is sent multiple times,
 it ends up "looping" as we're using a simple repeated XOR cypher.
-This is something that should be fixed.
